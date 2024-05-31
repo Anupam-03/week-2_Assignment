@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Management Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #file-form {
+            margin-bottom: 20px;
+        }
+        #file-form input[type="text"],
+        #file-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        #file-form button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        #file-form button:hover {
+            background-color: #0056b3;
+        }
+        #file-output {
+            white-space: pre-wrap;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Management Tool</h1>
+    <form id="file-form">
+        <input type="text" id="file-name" placeholder="Enter file name" required>
+        <textarea id="file-content" placeholder="Enter file content"></textarea>
+        <button type="button" onclick="createFile()">Create File</button>
+        <button type="button" onclick="readFile()">Read File</button>
+        <button type="button" onclick="deleteFile()">Delete File</button>
+    </form>
+    <pre id="file-output"></pre>
+    <script src="script.js"></script>
+</body>
+</html>
