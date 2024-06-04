@@ -1,4 +1,5 @@
 # week-2_Assignment
+Utilize Node.js core modules such as File System, Path, and HTTP to create a simple file management tool that can create, read, and delete files.
 
 ## File_Management_System
 
@@ -35,7 +36,7 @@ Welcome to the File Management System repository! This Node.js project allows us
 - **HTML**
 - **CSS**
 - **JavaScript** 
-- **Node.js**: http, fs, and path module.
+- **Node.js**: File System, HTTP, and Path modules.
 
 
 ## Installation
