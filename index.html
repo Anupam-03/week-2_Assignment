@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,83 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #47199e;
             margin: 0;
             padding: 20px;
+            color: #fff;
         }
+
+        .container {
+            max-width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 12rem;
+            background-color: #1f0554;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
         }
-        #file-form {
-            margin-bottom: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
         }
-        #file-form input[type="text"],
-        #file-form textarea {
-            width: 100%;
-            padding: 10px;
+
+        input,
+        textarea,
+        button {
             margin-bottom: 10px;
-            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #b794fe;
         }
-        #file-form button {
-            padding: 10px 20px;
-            margin-right: 10px;
+
+        button {
             cursor: pointer;
-            background-color: #007bff;
+            background-color: #9d00ff;
             color: #fff;
             border: none;
-            border-radius: 5px;
-            outline: none;
         }
-        #file-form button:hover {
+
+        button:hover {
             background-color: #0056b3;
         }
-        #file-output {
-            white-space: pre-wrap;
-            background-color: #f8f9fa;
+
+        #response {
+            margin-top: 20px;
             padding: 10px;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
+            height: 50px;
+            background-color: #8480ff;
+            border: 1px solid #b3e5fc;
+            color: #210dfd;
         }
     </style>
 </head>
+
 <body>
-    <h1>File Management Tool</h1>
-    <form id="file-form">
-        <input type="text" id="file-name" placeholder="Enter file name" required>
-        <textarea id="file-content" placeholder="Enter file content"></textarea>
-        <button type="button" onclick="createFile()">Create File</button>
-        <button type="button" onclick="readFile()">Read File</button>
-        <button type="button" onclick="deleteFile()">Delete File</button>
-    </form>
-    <pre id="file-output"></pre>
+    <div class="container">
+        <h1>File Management Tool</h1>
+        <form id="fileForm">
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName" name="fileName" required>
+
+            <label for="content">Content (for Create operation):</label>
+            <textarea id="content" name="content"></textarea>
+
+            <div style="display: flex; justify-content: space-between;">
+                <button type="button" id="createBtn">Create</button>
+                <button type="button" id="readBtn">Read</button>
+                <button type="button" id="deleteBtn">Delete</button>
+            </div>
+        </form>
+
+        <div id="response"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
