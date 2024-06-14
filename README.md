@@ -25,7 +25,7 @@ Welcome to the File Management System repository! This Node.js project allows us
   ### Example :
 ![image](https://github.com/Anupam-03/week-2_Assignment/assets/116145439/4f44f9c0-e144-42ab-8133-6bbe76e521bf)
 
-#. **Delete Function**:
+3. **Delete Function**:
    - File name: Enter the existing file name, you want to Delete.
    - Click on the Delete button.
   ### Example :
